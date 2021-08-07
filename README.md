@@ -17,5 +17,8 @@ UP: w or up
 DOWN: s or down  
 LEFT: a or left  
 RIGHT: d or right  
+WEAPON: tab  
+FIRE: left mouse  
+ROTATE: mouse  
   
   
