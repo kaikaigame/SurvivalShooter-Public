@@ -5,15 +5,29 @@ namespace Nightmare
 {
     public class EnemyAttack : PausibleObject
     {
-        public float timeBetweenAttacks = 0.5f;     // The time in seconds between each attack.
-        public int attackDamage = 10;               // The amount of health taken away per attack.
+        // The time in seconds between each attack.
+        public float timeBetweenAttacks = 0.5f;
 
-        Animator anim;                              // Reference to the animator component.
-        GameObject player;                          // Reference to the player GameObject.
-        PlayerHealth playerHealth;                  // Reference to the player's health.
-        EnemyHealth enemyHealth;                    // Reference to this enemy's health.
-        bool playerInRange;                         // Whether player is within the trigger collider and can be attacked.
-        float timer;                                // Timer for counting up to the next attack.
+        // The amount of health taken away per attack.
+        public int attackDamage = 10;
+
+        // Reference to the animator component.
+        Animator anim;
+
+        // Reference to the player GameObject.
+        GameObject player;
+
+        // Reference to the player's health.
+        PlayerHealth playerHealth;
+
+        // Reference to this enemy's health.
+        EnemyHealth enemyHealth;
+
+        // Whether player is within the trigger collider and can be attacked.
+        bool playerInRange;
+
+        // Timer for counting up to the next attack.
+        float timer;
 
         void Awake ()
         {
@@ -67,11 +81,11 @@ namespace Nightmare
             }
 
             // If the player has zero or less health...
-            if(playerHealth.currentHealth <= 0)
-            {
-                // ... tell the animator the player is dead.
-                anim.SetTrigger ("PlayerDead");
-            }
+            //if(playerHealth.currentHealth <= 0)
+            //{
+            //    // ... tell the animator the player is dead.
+            //    anim.SetTrigger ("PlayerDead");
+            //}
         }
 
         void Attack ()
@@ -80,11 +94,11 @@ namespace Nightmare
             timer = 0f;
 
             // If the player has health to lose...
-            if(playerHealth.currentHealth > 0)
-            {
-                // ... damage the player.
-                playerHealth.TakeDamage (attackDamage);
-            }
+            //if(playerHealth.currentHealth > 0)
+            //{
+            //    // ... damage the player.
+            //    playerHealth.TakeDamage (attackDamage);
+            //}
         }
     }
 }

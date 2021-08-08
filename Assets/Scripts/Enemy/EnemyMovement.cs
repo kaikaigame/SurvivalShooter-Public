@@ -18,9 +18,16 @@ namespace Nightmare
         float currentVision;
         public float timer = 0f;
 
+        // Reference to the player's position.
         Transform player;
+
+        // Reference to the player's health.
         PlayerHealth playerHealth;
+
+        // Reference to this enemy's health.
         EnemyHealth enemyHealth;
+
+        // Reference to the nav mesh agent.
         NavMeshAgent nav;
 
         void Awake ()
@@ -54,18 +61,18 @@ namespace Nightmare
             //{
 
                 // If both the enemy and the player have health left...
-                if (enemyHealth.CurrentHealth() > 0 && playerHealth.currentHealth > 0)
-                {
+                //if (enemyHealth.CurrentHealth() > 0 && playerHealth.currentHealth > 0)
+                //{
                     //LookForPlayer();
                     //WanderOrIdle();
 
                     // ... set the destination of the nav mesh agent to the player.
                     nav.SetDestination(player.position);
-                }
-                else
-                {
-                    nav.enabled = false;
-                }
+                //}
+                //else
+                //{
+                //    nav.enabled = false;
+                //}
 
             //}
         }

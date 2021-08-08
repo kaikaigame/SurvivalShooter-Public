@@ -5,20 +5,42 @@ namespace Nightmare
 {
     public class EnemyHealth : MonoBehaviour
     {
-        public int startingHealth = 100;            // The amount of health the enemy starts the game with.
-        public int currentHealth;                   // The current health the enemy has.
-        public float sinkSpeed = 2.5f;              // The speed at which the enemy sinks through the floor when dead.
-        public int scoreValue = 10;                 // The amount added to the player's score when the enemy dies.
-        public AudioClip deathClip;                 // The sound to play when the enemy dies.
+        // The amount of health the enemy starts the game with.
+        public int startingHealth = 100;
+
+        // The current health the enemy has.
+        public int currentHealth;
+
+        // The speed at which the enemy sinks through the floor when dead.
+        public float sinkSpeed = 2.5f;
+
+        // The amount added to the player's score when the enemy dies.
+        public int scoreValue = 10;
+
+        // The sound to play when the enemy dies.
+        public AudioClip deathClip;
 
         //int currentHealth;
-        Animator anim;                              // Reference to the animator.
-        AudioSource enemyAudio;                     // Reference to the audio source.
-        ParticleSystem hitParticles;                // Reference to the particle system that plays when the enemy is damaged.
-        CapsuleCollider capsuleCollider;            // Reference to the capsule collider.
-        
-        bool isDead;                                // Whether the enemy is dead.
-        bool isSinking;                             // Whether the enemy has started sinking through the floor.
+
+        // Reference to the animator.
+        Animator anim;
+
+        // Reference to the audio source.
+        AudioSource enemyAudio;
+
+        // Reference to the particle system
+        // that plays when the enemy is damaged.
+        ParticleSystem hitParticles;
+
+        // Reference to the capsule collider.
+        CapsuleCollider capsuleCollider;
+
+        // Whether the enemy is dead.
+        bool isDead;
+
+        // Whether the enemy has started sinking through the floor.
+        bool isSinking;
+
         EnemyMovement enemyMovement;
 
         void Awake ()

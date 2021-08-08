@@ -21,7 +21,6 @@ namespace Nightmare
             offset = transform.position - target.position;
         }
 
-
         void FixedUpdate ()
         {
             // Create a postion the camera is aiming
