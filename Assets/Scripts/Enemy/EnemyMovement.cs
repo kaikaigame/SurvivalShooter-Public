@@ -60,20 +60,19 @@ namespace Nightmare
             //if (!isPaused)
             //{
 
-                // If both the enemy and the player have health left...
-                //if (enemyHealth.CurrentHealth() > 0 && playerHealth.currentHealth > 0)
-                //{
-                    //LookForPlayer();
-                    //WanderOrIdle();
+            // If both the enemy and the player have health left...
+            if (enemyHealth.CurrentHealth() > 0 && playerHealth.currentHealth > 0)
+            {
+                //LookForPlayer();
+                //WanderOrIdle();
 
-                    // ... set the destination of the nav mesh agent to the player.
-                    nav.SetDestination(player.position);
-                //}
-                //else
-                //{
-                //    nav.enabled = false;
-                //}
-
+                //... set the destination of the nav mesh agent to the player.
+               nav.SetDestination(player.position);
+            }
+            else
+            {
+                nav.enabled = false;
+            }
             //}
         }
 

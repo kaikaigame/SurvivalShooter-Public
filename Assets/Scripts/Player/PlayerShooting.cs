@@ -7,23 +7,45 @@ namespace Nightmare
 {
     public class PlayerShooting : PausibleObject
     {
-        public int damagePerShot = 20;                  // The damage inflicted by each bullet.
-        public float timeBetweenBullets = 0.15f;        // The time between each shot.
-        public float range = 100f;                      // The distance the gun can fire.
+        // The damage inflicted by each bullet.
+        public int damagePerShot = 20;
+
+        // The time between each shot.
+        public float timeBetweenBullets = 0.15f;
+
+        // The distance the gun can fire.
+        public float range = 100f;
 
         public GameObject grenade;
         public float grenadeSpeed = 200f;
         public float grenadeFireDelay = 0.5f;
 
-        float timer;                                    // A timer to determine when to fire.
-        Ray shootRay;                                   // A ray from the gun end forwards.
-        RaycastHit shootHit;                            // A raycast hit to get information about what was hit.
-        int shootableMask;                              // A layer mask so the raycast only hits things on the shootable layer.
-        ParticleSystem gunParticles;                    // Reference to the particle system.
-        LineRenderer gunLine;                           // Reference to the line renderer.
-        AudioSource gunAudio;                           // Reference to the audio source.
-        Light gunLight;                                 // Reference to the light component.
-        float effectsDisplayTime = 0.2f;                // The proportion of the timeBetweenBullets that the effects will display for.
+        // A timer to determine when to fire.
+        float timer;
+
+        // A ray from the gun end forwards.
+        Ray shootRay;
+
+        // A raycast hit to get information about what was hit.
+        RaycastHit shootHit;
+
+        // A layer mask so the raycast only hits things on the shootable layer.
+        int shootableMask;
+
+        // Reference to the particle system.
+        ParticleSystem gunParticles;
+
+        // Reference to the line renderer.
+        LineRenderer gunLine;
+
+        // Reference to the audio source.
+        AudioSource gunAudio;
+
+        // Reference to the light component.
+        Light gunLight;
+
+        // The proportion of the timeBetweenBullets that the effects will display for.
+        float effectsDisplayTime = 0.2f;
 
         public Light faceLight;
         int grenadeStock = 99;
@@ -162,7 +184,8 @@ namespace Nightmare
             // If the raycast didn't hit anything on the shootable layer...
             else
             {
-                // ... set the second position of the line renderer to the fullest extent of the gun's range.
+                // ... set the second position of the line renderer
+                // to the fullest extent of the gun's range.
                 gunLine.SetPosition (1, shootRay.origin + shootRay.direction * range);
             }
         }
