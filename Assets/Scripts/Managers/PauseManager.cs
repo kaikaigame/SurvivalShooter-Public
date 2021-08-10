@@ -6,11 +6,10 @@ using UnityEngine.Audio;
 using UnityEditor;
 #endif
 
-public class PauseManager : MonoBehaviour {
-	
+public class PauseManager : MonoBehaviour 
+{
 	public AudioMixerSnapshot paused;
-	public AudioMixerSnapshot unpaused;
-	
+	public AudioMixerSnapshot unpaused;	
 	Canvas canvas;
 	
 	void Start()
@@ -30,21 +29,18 @@ public class PauseManager : MonoBehaviour {
 	public void Pause()
 	{
 		Time.timeScale = Time.timeScale == 0 ? 1 : 0;
-		Lowpass ();
-		
+		Lowpass ();		
 	}
 	
 	void Lowpass()
 	{
 		if (Time.timeScale == 0)
 		{
-			paused.TransitionTo(.01f);
-		}
-		
-		else
-			
+			paused.TransitionTo(0.01f);
+		}		
+		else			
 		{
-			unpaused.TransitionTo(.01f);
+			unpaused.TransitionTo(0.01f);
 		}
 	}
 	

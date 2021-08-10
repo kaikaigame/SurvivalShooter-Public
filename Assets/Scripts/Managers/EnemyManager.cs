@@ -4,7 +4,7 @@ namespace Nightmare
 {
     public class EnemyManager : PausibleObject
     {
-        private PlayerHealth playerHealth;
+        public PlayerHealth playerHealth;
         public GameObject enemy;
         public float spawnTime = 3f;
         public Transform[] spawnPoints;
@@ -16,7 +16,8 @@ namespace Nightmare
         {
             //timer = spawnTime;
 
-            // Call the Spawn function after a delay of the spawnTime and then continue to call after the same amount of time.
+            // Call the Spawn function after a delay of the spawnTime
+            // and then continue to call after the same amount of time.
             InvokeRepeating("Spawn", spawnTime, spawnTime);
         }
 
@@ -53,12 +54,15 @@ namespace Nightmare
                 return;
             }
 
-            // Find a random index between zero and one less than the number of spawn points.
+            // Find a random index between zero and
+            // one less than the number of spawn points.
             int spawnPointIndex = Random.Range (0, spawnPoints.Length);
 
-            // Create an instance of the enemy prefab at the randomly selected spawn point's position and rotation.
+            // Create an instance of the enemy prefab at
+            // the randomly selected spawn point's position and rotation.
             
-            Instantiate (enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+            Instantiate (enemy, spawnPoints[spawnPointIndex].position, 
+                spawnPoints[spawnPointIndex].rotation);
         }
     }
 }

@@ -137,9 +137,9 @@ namespace Nightmare
             playerShooting.enabled = false;
         }
 
-        //public void RestartLevel()
-        //{
-        //    EventManager.TriggerEvent("GameOver");
-        //}
+        public void RestartLevel()
+        {
+            //EventManager.TriggerEvent("GameOver");
+        }
     }
 }

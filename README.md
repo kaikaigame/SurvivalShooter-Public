@@ -20,5 +20,6 @@ RIGHT: d or right
 WEAPON: tab  
 FIRE: left mouse  
 ROTATE: mouse  
+MENU: esc  
   
   

@@ -7,11 +7,17 @@ namespace Nightmare
 {
     public class GameOverManager : MonoBehaviour
     {
-        public PlayerHealth playerHealth;       // Reference to the player's health.
-        public float restartDelay = 5f;         // Time to wait before restarting the level
+        // Reference to the player's health.
+        public PlayerHealth playerHealth;
 
-        Animator anim;                          // Reference to the animator component.
-        float restartTimer;                     // Timer to count up to restarting the level
+        // Time to wait before restarting the level
+        public float restartDelay = 5f;
+
+        // Reference to the animator component.
+        Animator anim;
+
+        // Timer to count up to restarting the level
+        float restartTimer;
 
         LevelManager lm;
         private UnityEvent listener;
@@ -34,14 +40,14 @@ namespace Nightmare
         //    anim.SetBool("GameOver", true);
         //}
 
-        //private void ResetLevel()
-        //{
-        //    ScoreManager.score = 0;
-        //    LevelManager lm = FindObjectOfType<LevelManager>();
-        //    lm.LoadInitialLevel();
-        //    anim.SetBool("GameOver", false);
-        //    playerHealth.ResetPlayer();
-        //}
+        private void ResetLevel()
+        {
+            //ScoreManager.score = 0;
+            //LevelManager lm = FindObjectOfType<LevelManager>();
+            //lm.LoadInitialLevel();
+            //anim.SetBool("GameOver", false);
+            //playerHealth.ResetPlayer();
+        }
 
         void Update()
         {

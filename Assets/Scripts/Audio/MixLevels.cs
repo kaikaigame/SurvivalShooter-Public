@@ -2,8 +2,8 @@
 using System.Collections;
 using UnityEngine.Audio;
 
-public class MixLevels : MonoBehaviour {
-
+public class MixLevels : MonoBehaviour 
+{
 	public AudioMixer masterMixer;
 
 	public void SetSfxLvl(float sfxLvl)
