@@ -9,7 +9,7 @@ Assets downloaded from
   
 https://connect-prd-cdn.unity.com/20201027/5e87d5b8-6edb-42e2-b83f-a7888374237d/SurvivalShooter.zip  
   
-Unity m_EditorVersion:  2021.1.16f1  
+Unity m_EditorVersion:  2021.1.20f1  
   
 KEYBOARD  
   
